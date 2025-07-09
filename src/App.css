@@ -2,6 +2,135 @@
   text-align: center;
 }
 
+.qrreder{
+  overflow: hidden;
+  background: linear-gradient(135deg, #e44885 0%, #f7b81a 100%);
+}
+body{
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e4cf48 0%, #f7b81a 100%);
+  position: relative;
+  }
+body .IQGC,body .LOGOI{
+
+    width :100px;
+    position: absolute;
+    animation: logoSlideIn 1s ease-out;
+  }
+  body img{
+    /* box-shadow: 0 0 20px #00000094; */
+    filter: drop-shadow(1px  1px 9px  #000000c4 );
+  }
+footer{
+  position: relative;
+ 
+}
+    footer .Hamhourabi{
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+      width: 300px;
+      animation: hamhourabiSlideUp 1.5s ease-out;
+    }
+ body .IQGC{
+  right: 5%;
+  top: 30px;
+  animation: iqgcSlideIn 1s ease-out 0.3s both;
+}
+ body .LOGOI{
+  left:  5%;
+  top: 15px;
+  animation: logoiSlideIn 1s ease-out 0.2s both;
+}
+
+@keyframes logoSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iqgcSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes logoiSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hamhourabiSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countCardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +165,357 @@
     transform: rotate(360deg);
   }
 }
+
+
+        .qr-scanner-container {
+          min-height: 89vh;
+          background: linear-gradient(180deg, #594093 0%,#e44885 20%, #f7b81a 100%);
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          font-family: "Arial", sans-serif;
+          animation: containerFadeIn 0.8s ease-out;
+        }
+
+        @keyframes containerFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .qr-scanner-card {
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+          padding: 2rem;
+          width: 100%;
+          z-index: 999;
+          max-width: 500px;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          animation: cardFadeIn 1s ease-out 0.2s both;
+        }
+
+        .header {
+          margin-bottom: 2rem;
+          animation: titleFadeIn 1s ease-out 0.4s both;
+        }
+
+        .title {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #2d3748;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+
+        .icon {
+          font-size: 2rem;
+        }
+
+        .controls {
+          margin-bottom: 2rem;
+          animation: buttonFadeIn 1s ease-out 0.6s both;
+        }
+
+        .main-btn {
+        background: linear-gradient(135deg, #e44885 0%, #f7b81a 100%);
+          border: none;
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin: 0 auto;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(78, 70, 0, 0.6);
+        }
+
+        .main-btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        .stop-btn {
+          background: linear-gradient(45deg, #ff6b6b 0%, #ee5a24 100%);
+          box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .stop-btn:hover {
+          box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .btn-icon {
+          font-size: 1.2rem;
+        }
+
+        .camera-container {
+          margin-bottom: 2rem;
+          animation: cardFadeIn 1s ease-out 0.8s both;
+        }
+
+        .camera-wrapper {
+          position: relative;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .camera {
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: cover;
+        }
+
+        .scanning-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+        }
+
+        .scanning-frame {
+          width: 200px;
+          height: 200px;
+          border: 3px solid #4facfe;
+          border-radius: 10px;
+          animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+
+        .info-section {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          animation: cardFadeIn 1s ease-out 1s both;
+        }
+
+        .email-display {
+          background: rgba(79, 172, 254, 0.1);
+          border-radius: 10px;
+          padding: 1rem;
+          border-left: 4px solid #941af775;
+        }
+/* background: linear-gradient(135deg, #e44885 0%, #f7b81a 100%); */
+        .label {
+          font-weight: 600;
+          color: #2d3748;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .value {
+          color: #4a5568;
+          font-size: 0.9rem;
+          word-break: break-all;
+        }
+
+        .loading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          color: #4facfe;
+          font-weight: 600;
+        }
+
+        .spinner {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #e2e8f0;
+          border-top: 2px solid #4facfe;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .result {
+          padding: 1rem;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+
+        .result.success {
+          background: rgba(72, 187, 120, 0.1);
+          color: #2f855a;
+          border-left: 4px solid #48bb78;
+        }
+
+        .result.error {
+          background: rgba(245, 101, 101, 0.1);
+          color: #c53030;
+          border-left: 4px solid #f56565;
+        }
+
+        .count-section {
+          display: flex;
+          justify-content: center;
+          animation: countCardSlideIn 1s ease-out 1.2s both;
+        }
+
+      .count-card {
+           background: linear-gradient(180deg, #594093 1%,#e44885  100%);        
+          color: white;
+          padding: 1rem;
+          border-radius: 25px;
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+          min-width: 200px;
+           flex-direction: column;
+        }
+
+        .count-icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+        }
+
+        .count-info {
+          text-align: center;
+        }
+
+        .count-label {
+          font-size: 0.9rem;
+          opacity: 0.9;
+         
+        }
+
+        .count-value {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+
+        .retry-btn {
+          background: linear-gradient(45deg, #ffeaa7 0%, #fab1a0 100%);
+          border: none;
+          color: #2d3748;
+          padding: 0.8rem 1.5rem;
+          border-radius: 50px;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin: 0 auto;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(255, 234, 167, 0.4);
+          animation: buttonFadeIn 1s ease-out 1.4s both;
+        }
+
+        .retry-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 234, 167, 0.6);
+        }
+
+        .retry-btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .qr-scanner-container {
+            padding: 3.5rem;
+          }
+
+          .qr-scanner-card {
+            padding: 2rem;
+            border-radius: 25px;
+          }
+
+          .title {
+            font-size: 2rem;
+          }
+
+          .main-btn {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .scanning-frame {
+            width: 150px;
+            height: 150px;
+          }
+
+          .count-card {
+            min-width: auto;
+            width: 100%;
+          }
+
+          .count-info {
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .title {
+            font-size: 1.8rem;
+          }
+
+          .main-btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+          }
+
+          .scanning-frame {
+            width: 120px;
+            height: 120px;
+          }
+
+          .count-value {
+            font-size: 1.8rem;
+          }
+
+          .email-display {
+            padding: 0.8rem;
+          }
+        }
